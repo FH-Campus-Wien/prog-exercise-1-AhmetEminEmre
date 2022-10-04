@@ -41,29 +41,25 @@ public class App {
 
     //todo Task 4
     public void addTwoNumbers(){
-        int number1;
-        int number2;
-        int sum;
         Scanner sc = new Scanner(System.in);
 
-        number1 = sc.nextInt();
-        number2 = sc.nextInt();
-        sum = number1 + number2;
+        int number1 = sc.nextInt();
+        int number2 = sc.nextInt();
+        int sum = number1 + number2;
 
         System.out.println(sum);
     }
 
     //todo Task 5
     public void swapTwoNumbers(){
-        int number1;
-        int number2;
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Before Swap:");
         System.out.print("x: ");
-        number1 = sc.nextInt();
+        int number1 = sc.nextInt();
         System.out.print("y: ");
-        number2 = sc.nextInt();
+        int number2 = sc.nextInt();
         //XOR Operator (Immer 0 wenn beide Eingaenge gleich sind)
         number1 = number1 ^ number2;
         number2 = number1 ^ number2;
@@ -75,14 +71,13 @@ public class App {
 
     //todo Task 6
     public void compareTwoNumbers(){
-        int number1;
-        int number2;
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("n1: ");
-        number1 = sc.nextInt();
+        int number1 = sc.nextInt();
         System.out.print("n2: ");
-        number2 = sc.nextInt();
+        int number2 = sc.nextInt();
 
         if (number1 > number2)
         {
@@ -100,11 +95,10 @@ public class App {
 
     //todo Task 7
     public void ratingSalesPerson(){
-        int number1;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter annual Revenue: ");
-        number1 = sc.nextInt();
+        int number1 = sc.nextInt();
         if (number1 < 0 || number1 >= 100000)
         {
             System.out.println("Invalid Revenue");
@@ -130,12 +124,11 @@ public class App {
 
     //todo Task 8
     public void getCommissionRate(){
-        int number1;
         String comrate;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter CommissionClass: ");
-        number1 = sc.nextInt();
+        int number1 = sc.nextInt();
         switch(number1)
         {
             case 1:
@@ -163,11 +156,11 @@ public class App {
 
     //todo Task 9
     public void leapyear(){
-        int year;
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Year: ");
-        year = sc.nextInt();
+        int year = sc.nextInt();
         if (year % 4 == 0)
         {
             if (year % 100 == 0)
@@ -194,24 +187,18 @@ public class App {
 
     //todo Task 10
     public void transposedNumbers(){
-        int number1;
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Number: ");
-        number1 = sc.nextInt();
-        int number2 = number1 % 10;
-        int number3 = (number1 % 100) / 10;
-        int number4 = (number1 % 1000) / 100;
-        System.out.println(number2 + "" + number3 + "" + number4);
+        int number1 = sc.nextInt();
 
-        //Mit While-Schleife
-        //int tmp = number1;
-        //int erg = 0;
-        //while (tmp > 0){
-          //  erg = (erg * 10) + (tmp % 10);
-          //  tmp = tmp/10;
-        //}
-        //System.out.print(erg);
+        int result = 0;
+        while (number1 > 0){
+            result = (result * 10) + (number1 % 10);
+            number1 = number1/10;
+        }
+        System.out.println(result);
+
     }
 
 
